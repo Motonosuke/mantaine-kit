@@ -1,1 +1,1 @@
-export { Grid, GridItem } from '@chakra-ui/react';
+export { Grid } from '@mantine/core';

@@ -1,1 +1,1 @@
-export { Center, Square, Circle } from '@chakra-ui/react';
+export { Center } from '@mantine/core';

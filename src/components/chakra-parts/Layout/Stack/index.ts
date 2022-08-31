@@ -1,1 +1,1 @@
-export { Stack, HStack, VStack } from '@chakra-ui/react';
+export { Stack } from '@mantine/core';

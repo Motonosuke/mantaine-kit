@@ -1,7 +1,7 @@
 import type { CustomNextPage } from 'next';
 
 import { MainLayout } from 'components/Layout';
-import { Box } from 'components/chakra-parts/Layout/Box';
+import { Box } from 'components/chakra-parts/Miscellaneous/Box';
 import { Text } from 'components/chakra-parts/Typography';
 
 const Home: CustomNextPage = () => {

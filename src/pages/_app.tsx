@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { MantineProvider } from '@mantine/core';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
@@ -16,9 +16,9 @@ type AppPropsWithLayout = AppProps & {
 const NextApp: NextPage<AppProps> = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    <ChakraProvider resetCSS={true} theme={theme}>
+    <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
       {getLayout(<Component {...pageProps} />)}
-    </ChakraProvider>
+    </MantineProvider>
   );
 };
 
