@@ -1,1 +1,1 @@
-export { Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/react';
+export { Alert } from '@mantine/core';
