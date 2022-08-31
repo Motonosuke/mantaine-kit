@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from 'components/chakra-parts/Miscellaneous/Box';
+import { Box } from 'components/mantine-parts/Miscellaneous/Box';
 import { Posts } from 'features/posts';
 
 interface Props {

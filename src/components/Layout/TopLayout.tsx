@@ -1,16 +1,11 @@
 import type { CustomLayout } from 'next';
 
-import { Header } from 'components/Header';
-import { Box } from 'components/chakra-parts/Layout';
-import { chakra } from 'components/chakra-parts/Other';
+import { Box } from 'components/mantine-parts/Miscellaneous';
 
 export const TopLayout: CustomLayout = (page) => {
   return (
-    <chakra.main>
-      <Header />
-      <Box height="100vh" mt={20} mx="auto" width="70vw">
-        {page}
-      </Box>
-    </chakra.main>
+    <Box mt={20} mx="auto">
+      {page}
+    </Box>
   );
 };
