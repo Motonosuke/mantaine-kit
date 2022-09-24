@@ -3,8 +3,6 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 
-import { theme } from 'components/theme/Theme';
-
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -16,7 +14,7 @@ type AppPropsWithLayout = AppProps & {
 const NextApp: NextPage<AppProps> = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    <MantineProvider theme={theme} withGlobalStyles withNormalizeCSS>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
       {getLayout(<Component {...pageProps} />)}
     </MantineProvider>
   );
