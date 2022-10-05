@@ -1,15 +1,10 @@
 import type { CustomNextPage } from 'next';
 
 import { MainLayout } from 'components/Layout';
-import { Box } from 'components/mantine-parts/Miscellaneous/Box';
-import { Text } from 'components/mantine-parts/Typography';
+import { HomePage } from 'page-components/home';
 
-const Home: CustomNextPage = () => {
-  return (
-    <Box>
-      <Text>Top Page</Text>
-    </Box>
-  );
+const Home: CustomNextPage = (props) => {
+  return <HomePage {...props} />;
 };
 
 Home.getLayout = MainLayout;

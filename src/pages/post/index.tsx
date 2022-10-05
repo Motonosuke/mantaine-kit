@@ -1,17 +1,12 @@
+import { CustomNextPage } from 'next';
 import React from 'react';
 
-import { Box } from 'components/mantine-parts/Miscellaneous/Box';
-import { useFetchPosts } from 'features/posts';
-import { PostContainer } from 'features/posts/components/post-container';
+import { TopLayout } from 'components/Layout';
+import { PostPage } from 'page-components/post';
 
-const Post = () => {
-  const { data } = useFetchPosts();
-
-  return (
-    <Box>
-      <PostContainer data={data} />
-    </Box>
-  );
+const Post: CustomNextPage = (props) => {
+  return <PostPage {...props} />;
 };
 
+Post.getLayout = TopLayout;
 export default Post;
